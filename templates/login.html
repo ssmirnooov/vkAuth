@@ -1,0 +1,11 @@
+<!-- templates/login.html -->
+{% extends 'base.html' %}
+{% block title %} Sign in {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-1 mx-auto social-container my-2 order-md-1">
+        <a class="btn btn-primary" href="{% url 'social:begin' 'vk-oauth2' %}" role="button">Login with Vk</a>
+    </div>
+</div>
+</div>
+{% endblock %}

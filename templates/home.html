@@ -1,0 +1,17 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-12 mb-3">
+       <h4 class="text-center"> Welcome {{ user.first_name }} {{ user.last_name }}! </h4>
+        <ul>
+        {% for friend in friends %}
+            <li>
+                <a href="http://vk.com/{{friend.domain}}">{{friend.first_name}} {{friend.last_name}}</a>
+            </li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>
+{% endblock %}
